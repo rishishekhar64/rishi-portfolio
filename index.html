@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rishi Shekhar — Python Developer and Computer Science student portfolio featuring Python, SQLite, AI assistant, software engineering projects, and developer experience." />
+  <meta name="theme-color" content="#06111f" />
+  <meta property="og:title" content="Rishi Shekhar | Python Developer Portfolio" />
+  <meta property="og:description" content="Interactive 3D-inspired software developer portfolio for Python, SQLite, AI and software engineering projects." />
+  <meta property="og:type" content="website" />
+  <title>Rishi Shekhar | Python Developer Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Go to home">
+      <span class="brand-mark">RS</span>
+      <span class="brand-text">Rishi Dev Lab</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">☀</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="pulse-dot"></span> Available for internships, Werkstudent roles & junior developer opportunities</p>
+        <h1>
+          Hi, I’m <span class="gradient-text">Rishi Shekhar</span><br />
+          <span class="role-line">I build <span id="typed-role">Python software</span></span>
+        </h1>
+        <p class="hero-copy">
+          Computer Science student in Berlin focused on building practical Python applications,
+          database-backed systems, automation tools, and security-aware software projects.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary magnetic" href="#projects">View Projects</a>
+          <a class="btn secondary magnetic" href="assets/Rishi_Shekhar_CV.txt" download>Download CV</a>
+          <a class="btn ghost magnetic" href="https://github.com/rishishekhar64" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="hero-stats" aria-label="Profile highlights">
+          <article>
+            <strong>Python</strong>
+            <span>Main language</span>
+          </article>
+          <article>
+            <strong>7</strong>
+            <span>GitHub repos</span>
+          </article>
+          <article>
+            <strong>Berlin</strong>
+            <span>CS student</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-lab reveal" aria-label="Interactive developer lab illustration">
+        <div class="lab-holo-ring ring-one"></div>
+        <div class="lab-holo-ring ring-two"></div>
+        <div class="floating-chip chip-a">Python</div>
+        <div class="floating-chip chip-b">SQLite</div>
+        <div class="floating-chip chip-c">Git</div>
+        <div class="floating-chip chip-d">AI</div>
+        <div class="dev-monitor tilt-card">
+          <div class="monitor-topbar"><span></span><span></span><span></span></div>
+          <div class="monitor-screen">
+            <pre><code id="hero-code"></code></pre>
+          </div>
+        </div>
+        <div class="terminal-card tilt-card">
+          <div class="terminal-line"><span class="terminal-prompt">rishi@devlab</span>:~$ build portfolio</div>
+          <div class="terminal-output success">✓ Python projects loaded</div>
+          <div class="terminal-output success">✓ Recruiter mode activated</div>
+          <div class="terminal-output blinking">_</div>
+        </div>
+        <div class="orbital-stack" aria-hidden="true">
+          <span>🐍</span><span>🗄</span><span>⚙</span><span>🔐</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <p class="section-kicker">About</p>
+        <h2>Developer mindset, student energy, real projects.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass-card about-card reveal">
+          <h3>Who I am</h3>
+          <p>
+            I’m an Informatik student at SRH Hochschule Berlin building my foundation as a Python Developer / Software Engineer.
+            My focus is practical: writing clean logic, using databases, improving problem solving, and turning coursework into portfolio-ready projects.
+          </p>
+          <p>
+            I’m currently looking for opportunities where I can learn from real engineering teams and contribute to software, automation, backend logic, and data-driven applications.
+          </p>
+        </article>
+        <article class="glass-card mission-card reveal">
+          <h3>Current direction</h3>
+          <ul class="check-list">
+            <li>Build more complete Python applications with files, databases and user workflows.</li>
+            <li>Improve GitHub quality with clean README files and structured code.</li>
+            <li>Prepare for internship and Werkstudent applications in Germany.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Tech Universe</p>
+        <h2>Skills orbiting around Python development.</h2>
+      </div>
+      <div class="skills-layout">
+        <div class="skill-planet reveal" aria-label="Rotating technology stack planet">
+          <div class="planet-core">RS</div>
+          <span class="orbit orbit-1"><b>Python</b></span>
+          <span class="orbit orbit-2"><b>SQLite</b></span>
+          <span class="orbit orbit-3"><b>Git</b></span>
+          <span class="orbit orbit-4"><b>OOP</b></span>
+          <span class="orbit orbit-5"><b>VS Code</b></span>
+          <span class="orbit orbit-6"><b>AI</b></span>
+        </div>
+        <div class="skills-grid reveal">
+          <article class="skill-card">
+            <span>🐍</span>
+            <h3>Python Development</h3>
+            <p>Console apps, functions, logic building, error handling, automation and project structure.</p>
+          </article>
+          <article class="skill-card">
+            <span>🗄</span>
+            <h3>SQLite & Data</h3>
+            <p>CRUD operations, product/order data, simple database-backed application workflows.</p>
+          </article>
+          <article class="skill-card">
+            <span>⚙</span>
+            <h3>Software Engineering</h3>
+            <p>OOP basics, modular files, clean output formatting, validation and practical user flows.</p>
+          </article>
+          <article class="skill-card">
+            <span>🔐</span>
+            <h3>Security Basics</h3>
+            <p>Password strength checks, hashing concepts, authentication awareness and safer logic.</p>
+          </article>
+          <article class="skill-card">
+            <span>🤖</span>
+            <h3>AI/Voice Tools</h3>
+            <p>Voice assistant concepts with speech recognition, text-to-speech and desktop automation ideas.</p>
+          </article>
+          <article class="skill-card">
+            <span>🧰</span>
+            <h3>Developer Tools</h3>
+            <p>GitHub, VS Code, documentation, debugging and preparing projects for recruiters.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section command-section" id="command">
+      <div class="command-panel reveal">
+        <div class="terminal-top"><span></span><span></span><span></span><strong>recruiter-terminal</strong></div>
+        <div class="command-body">
+          <p><span>&gt;</span> scan rishi --profile</p>
+          <p class="green">Status: Computer Science student, Berlin</p>
+          <p class="blue">Strengths: Python, SQLite, OOP, practical software projects</p>
+          <p class="purple">Goal: Internship / Werkstudent / Junior Developer role</p>
+          <p><span>&gt;</span> open projects --best</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Project Room</p>
+        <h2>Real projects presented like a professional developer portfolio.</h2>
+        <p class="section-subtitle">Filter by area and open the GitHub repositories directly.</p>
+      </div>
+
+      <div class="project-filters reveal" aria-label="Project filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="database">Database</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="coursework">Coursework</button>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card featured tilt-card reveal" data-category="python database">
+          <div class="project-orb">🛒</div>
+          <div class="project-meta"><span>Featured</span><span>Python + SQLite</span></div>
+          <h3>E-Commerce Terminal System</h3>
+          <p>Console-based e-commerce application with product management, shopping cart, order handling and SQLite CRUD operations.</p>
+          <div class="tag-row"><span>Python</span><span>SQLite</span><span>CRUD</span><span>Orders</span></div>
+          <a href="https://github.com/rishishekhar64/E-Commerce-Terminal-base-" target="_blank" rel="noopener">Open Repository →</a>
+        </article>
+
+        <article class="project-card tilt-card reveal" data-category="python">
+          <div class="project-orb">🏦</div>
+          <div class="project-meta"><span>Banking</span><span>Python</span></div>
+          <h3>ATM Banking Simulator</h3>
+          <p>Banking workflow simulation for checking balance, depositing funds, withdrawing money and handling invalid transactions.</p>
+          <div class="tag-row"><span>Python</span><span>Validation</span><span>Exceptions</span></div>
+          <a href="https://github.com/rishishekhar64/ATM" target="_blank" rel="noopener">Open Repository →</a>
+        </article>
+
+        <article class="project-card tilt-card reveal" data-category="python security">
+          <div class="project-orb">🔐</div>
+          <div class="project-meta"><span>Security</span><span>Python</span></div>
+          <h3>Password Strength Checker</h3>
+          <p>Interactive console app that checks character composition and password length to classify passwords and give improvement tips.</p>
+          <div class="tag-row"><span>Python</span><span>Security</span><span>Strings</span></div>
+          <a href="https://github.com/rishishekhar64/Password-Strength-Checker" target="_blank" rel="noopener">Open Repository →</a>
+        </article>
+
+        <article class="project-card tilt-card reveal" data-category="python">
+          <div class="project-orb">🛍</div>
+          <div class="project-meta"><span>Retail</span><span>Python</span></div>
+          <h3>Smart Shopping Cart</h3>
+          <p>Retail checkout simulation using dictionaries, functions, billing logic, conditional discounts and clean receipt output.</p>
+          <div class="tag-row"><span>Python</span><span>Functions</span><span>Billing</span></div>
+          <a href="https://github.com/rishishekhar64/Smart-Shopping-Cart" target="_blank" rel="noopener">Open Repository →</a>
+        </article>
+
+        <article class="project-card tilt-card reveal" data-category="python">
+          <div class="project-orb">🎓</div>
+          <div class="project-meta"><span>Education</span><span>Python</span></div>
+          <h3>Student Grade Management</h3>
+          <p>Student grading application that accepts marks, calculates average, assigns grades and displays academic status clearly.</p>
+          <div class="tag-row"><span>Python</span><span>Logic</span><span>Formatting</span></div>
+          <a href="https://github.com/rishishekhar64/Student-Grade-Management" target="_blank" rel="noopener">Open Repository →</a>
+        </article>
+
+        <article class="project-card tilt-card reveal" data-category="python">
+          <div class="project-orb">🚆</div>
+          <div class="project-meta"><span>Calculator</span><span>Python</span></div>
+          <h3>Train Ticket Fare</h3>
+          <p>Railway fare calculator with journey details, validation, class-based pricing, passenger discounts and fare summary.</p>
+          <div class="tag-row"><span>Python</span><span>Validation</span><span>Pricing</span></div>
+          <a href="https://github.com/rishishekhar64/Train-Ticket-Fare" target="_blank" rel="noopener">Open Repository →</a>
+        </article>
+
+        <article class="project-card concept tilt-card reveal" data-category="python coursework">
+          <div class="project-orb">🤖</div>
+          <div class="project-meta"><span>AI Assistant</span><span>Python</span></div>
+          <h3>Jarvis AI Assistant</h3>
+          <p>Voice assistant concept using offline speech recognition, text-to-speech and desktop automation ideas.</p>
+          <div class="tag-row"><span>Python</span><span>Vosk</span><span>gTTS</span><span>Automation</span></div>
+          <a href="#contact">Ask me about this →</a>
+        </article>
+
+        <article class="project-card concept tilt-card reveal" data-category="security coursework">
+          <div class="project-orb">🧬</div>
+          <div class="project-meta"><span>Security Lab</span><span>Coursework</span></div>
+          <h3>Password Storage & Cracking Demo</h3>
+          <p>Security presentation and demo explaining hashing, SHA-256, wordlists, salting, peppering and Argon2id resistance.</p>
+          <div class="tag-row"><span>SHA-256</span><span>Argon2id</span><span>Security</span></div>
+          <a href="#contact">Discuss the demo →</a>
+        </article>
+
+        <article class="project-card concept tilt-card reveal" data-category="python coursework">
+          <div class="project-orb">📡</div>
+          <div class="project-meta"><span>Networks</span><span>Python</span></div>
+          <h3>TCP Video Chat App</h3>
+          <p>Computer Networks project concept using Python sockets, client-server architecture, TCP reliability and encrypted communication.</p>
+          <div class="tag-row"><span>TCP</span><span>Sockets</span><span>Encryption</span></div>
+          <a href="#contact">Ask for details →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="section-heading reveal">
+        <p class="section-kicker">Timeline</p>
+        <h2>Education & growth path.</h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-line"></div>
+        <article class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-card glass-card">
+            <h3>B.Sc. Informatik — SRH Hochschule Berlin</h3>
+            <p>Computer Science studies focused on programming, software development, computer networks and practical project work.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-year">Now</span>
+          <div class="timeline-card glass-card">
+            <h3>Python Developer Portfolio Phase</h3>
+            <p>Building GitHub-ready projects, improving documentation, strengthening Python, SQLite, OOP and software engineering fundamentals.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-year">2029</span>
+          <div class="timeline-card glass-card">
+            <h3>Expected graduation</h3>
+            <p>Goal: graduate with a strong portfolio, real-world engineering experience and a clear path into software development.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card reveal">
+        <div class="contact-copy">
+          <p class="section-kicker">Contact</p>
+          <h2>Let’s build something useful.</h2>
+          <p>
+            I’m open to internships, Werkstudent positions and junior developer opportunities where I can learn, contribute and grow as a Python/software developer.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:rishishekhar64@gmail.com"><span>Email</span><strong>rishishekhar64@gmail.com</strong></a>
+          <a class="contact-link" href="https://github.com/rishishekhar64" target="_blank" rel="noopener"><span>GitHub</span><strong>github.com/rishishekhar64</strong></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/rishi-shekhar" target="_blank" rel="noopener"><span>LinkedIn</span><strong>linkedin.com/in/rishi-shekhar</strong></a>
+          <button class="contact-link copy-email" type="button"><span>Quick Action</span><strong>Copy email</strong></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="command-button" type="button" aria-label="Open quick actions">⌘</button>
+  <div class="command-menu" aria-hidden="true" role="dialog" aria-label="Quick actions">
+    <div class="command-menu-inner">
+      <button class="command-close" type="button" aria-label="Close quick actions">×</button>
+      <h3>Quick Actions</h3>
+      <a href="#projects">View projects</a>
+      <a href="mailto:rishishekhar64@gmail.com">Send email</a>
+      <a href="https://github.com/rishishekhar64" target="_blank" rel="noopener">Open GitHub</a>
+      <a href="https://www.linkedin.com/in/rishi-shekhar" target="_blank" rel="noopener">Open LinkedIn</a>
+      <a href="assets/Rishi_Shekhar_CV.txt" download>Download CV</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Designed and coded by Rishi Shekhar — Python Developer Portfolio.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
