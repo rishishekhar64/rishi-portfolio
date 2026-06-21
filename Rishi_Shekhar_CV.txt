@@ -1,0 +1,49 @@
+RISHI SHEKHAR
+Python Developer | Computer Science Student
+Berlin, Germany
+Email: rishishekhar64@gmail.com
+GitHub: https://github.com/rishishekhar64
+LinkedIn: https://www.linkedin.com/in/rishi-shekhar
+
+PROFILE
+Computer Science student focused on Python development, practical software engineering, SQLite-backed applications, automation concepts and security-aware programming. Open to internships, Werkstudent positions and junior developer opportunities.
+
+TECHNICAL SKILLS
+- Programming: Python
+- Databases: SQLite
+- Concepts: OOP basics, functions, validation, exception handling, CRUD operations
+- Tools: GitHub, VS Code
+- Additional interests: AI assistants, computer networks, password security
+
+PROJECTS
+1. E-Commerce Terminal System
+   Python + SQLite console application with product management, shopping cart, orders and CRUD operations.
+   Repository: https://github.com/rishishekhar64/E-Commerce-Terminal-base-
+
+2. ATM Banking Simulator
+   Python application simulating balance checks, deposits, withdrawals, validation and error handling.
+   Repository: https://github.com/rishishekhar64/ATM
+
+3. Password Strength Checker
+   Python console application that checks password length and character composition, then classifies strength.
+   Repository: https://github.com/rishishekhar64/Password-Strength-Checker
+
+4. Smart Shopping Cart
+   Python shopping cart and billing logic project using dictionaries, functions and conditional discounts.
+   Repository: https://github.com/rishishekhar64/Smart-Shopping-Cart
+
+5. Student Grade Management
+   Python application for calculating averages, assigning grades and showing academic status.
+   Repository: https://github.com/rishishekhar64/Student-Grade-Management
+
+6. Train Ticket Fare
+   Python fare calculator with journey details, validation, class-based pricing and passenger discounts.
+   Repository: https://github.com/rishishekhar64/Train-Ticket-Fare
+
+EDUCATION
+B.Sc. Informatik / Computer Science
+SRH Hochschule Berlin
+Expected completion: 2029
+
+CAREER TARGET
+Internship, Werkstudent or junior developer role in software development, Python development, backend logic, automation or data-driven applications.
